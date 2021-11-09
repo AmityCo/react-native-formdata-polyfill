@@ -1,0 +1,12 @@
+name: PR task checker
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  task-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: y-nk/task-checker-action@v0.1.0
+        with:
+          skip_on: feature branch

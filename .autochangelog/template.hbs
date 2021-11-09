@@ -1,0 +1,12 @@
+# Changelog
+
+{{#each releases}}
+## [{{title}}]({{href}})
+#### {{niceDate}}
+
+{{#commit-list commits heading='### Commits'}}
+- {{subject}} ([`{{shorthash}}`]({{href}})) (by {{author}})
+{{/commit-list}}
+
+---
+{{/each}}
