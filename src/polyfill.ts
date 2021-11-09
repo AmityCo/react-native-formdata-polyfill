@@ -1,2 +1,3 @@
-import polyfill from "./";
+import polyfill from '.';
+
 polyfill();

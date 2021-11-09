@@ -1,4 +1,4 @@
-declare var navigator:
+declare let navigator:
   | {
       [k: string]: any;
     }
@@ -18,13 +18,16 @@ declare type FormDataPart =
     };
 
 declare class FormData {
+  // eslint-disable-next-line no-unused-vars
   append(name: string, value: any): void;
+
   getParts(): Array<FormDataPart>;
+
   getAll(): Array<FormDataPart>;
 }
 
 export default function polyfill() {
-  if (navigator?.product === "ReactNative" && FormData) {
+  if (navigator?.product === 'ReactNative' && FormData) {
     FormData.prototype.getAll ??= FormData.prototype.getParts;
   }
 }
