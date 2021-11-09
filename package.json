@@ -10,7 +10,8 @@
     "build": "tsc --project .",
     "changelog": "auto-changelog --config ./.autochangelog/config.json && git add CHANGELOG.md",
     "version": "npm run changelog",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags",
+    "start": "tsc --watch"
   },
   "repository": {
     "type": "git",
