@@ -1,0 +1,11 @@
+---
+blank_issues_enabled: false
+contact_links:
+  -
+    about: "Please ask and answer usage questions on Stack Overflow."
+    name: Question
+    url: "https://stackoverflow.com/questions/tagged/amity-social-cloud"
+  -
+    about: "Please check the Community board before filing new issues"
+    name: "Amity Social Cloud Community"
+    url: "https://community.amity.co/"
