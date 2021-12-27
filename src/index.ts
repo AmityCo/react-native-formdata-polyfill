@@ -27,7 +27,7 @@ declare class FormData {
 }
 
 export default function polyfill() {
-  if (navigator?.product === 'ReactNative' && FormData) {
-    FormData.prototype.getAll ??= FormData.prototype.getParts;
+  if (navigator?.product === 'ReactNative' && FormData && !FormData?.prototype?.getAll) {
+    FormData.prototype.getAll = FormData.prototype.getParts;
   }
 }
