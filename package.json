@@ -4,6 +4,9 @@
   "description": "A simple polyfill for react native FormData",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    "./*": "./dist/*"
+  },
   "scripts": {
     "clean": "rimraf dist/",
     "install": "husky install",
