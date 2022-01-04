@@ -7,7 +7,9 @@
   "scripts": {
     "clean": "rimraf dist/",
     "install": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "npm run build",
+    "test:dom": "jest -c tests/dom/jest.config.js",
+    "test:node": "jest -c tests/node/jest.config.js",
     "prebuild": "npm run clean",
     "build": "tsc --project .",
     "changelog": "auto-changelog --config ./.autochangelog/config.json && git add CHANGELOG.md",
@@ -29,13 +31,17 @@
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
+    "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "auto-changelog": "^2.3.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.2.0",
     "husky": "^7.0.4",
+    "jest": "^27.4.5",
     "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
   },
   "peerDependencies": {
     "eslint-config-eko": "3.0.0"
