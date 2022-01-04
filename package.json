@@ -5,8 +5,10 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "clean": "rimraf dist/",
     "install": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm run clean",
     "build": "tsc --project .",
     "changelog": "auto-changelog --config ./.autochangelog/config.json && git add CHANGELOG.md",
     "version": "npm run changelog",
@@ -33,7 +35,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^8.2.0",
     "husky": "^7.0.4",
-    "typescript": "^4.4.4"
+    "rimraf": "^3.0.2",
   },
   "peerDependencies": {
     "eslint-config-eko": "3.0.0"
