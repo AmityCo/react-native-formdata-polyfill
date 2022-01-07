@@ -18,6 +18,6 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
 
-  transformIgnorePatterns: ['/node_modules/'],
+  transformIgnorePatterns: ['node_modules/(?!(@react-native|react-native)/)'],
   testEnvironment: 'jsdom',
 };
