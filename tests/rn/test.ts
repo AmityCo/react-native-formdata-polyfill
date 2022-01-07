@@ -1,16 +1,14 @@
 import polyfill from '../../dist';
 
-// certainty
-global.navigator = {
-  ...global.navigator,
-  product: 'ReactNative',
-};
+Object.defineProperty(global.navigator, 'product', { value: 'ReactNative' });
 
 // the thing we are looking to patch
+// @ts-ignore
 delete FormData.prototype.getAll;
 
-test('FormData.getAll exists in the dom', () => {
-  expect(FormData.prototype.getAll).not.toBeUndefined();
+test('FormData.getAll not exists in the dom', () => {
+  // @ts-ignore
+  expect(FormData.prototype.getAll).toBeUndefined();
 });
 
 test('polyfill is a function', () => {
@@ -18,9 +16,11 @@ test('polyfill is a function', () => {
 });
 
 test('FormData.getAll has been changed in React Native', () => {
+  // @ts-ignore
   const ref = FormData.prototype.getAll;
 
   polyfill();
 
+  // @ts-ignore
   expect(ref).not.toBe(FormData.prototype.getAll);
 });
