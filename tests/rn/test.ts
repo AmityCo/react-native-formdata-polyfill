@@ -1,5 +1,8 @@
 import polyfill from '../../dist';
 
+// @ts-ignore
+global.FormData = require('react-native/Libraries/Network/FormData');
+
 Object.defineProperty(global.navigator, 'product', { value: 'ReactNative' });
 
 // the thing we are looking to patch
