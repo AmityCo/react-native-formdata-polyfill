@@ -18,7 +18,7 @@ declare type FormDataPart =
     };
 
 declare class FormData {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-unused-vars
   append(name: string, value: any): void;
 
   getParts(): Array<FormDataPart>;
@@ -27,7 +27,12 @@ declare class FormData {
 }
 
 export default function polyfill() {
-  if (navigator?.product === 'ReactNative' && FormData) {
-    FormData.prototype.getAll ??= FormData.prototype.getParts;
+  try {
+    if (navigator?.product === 'ReactNative' && FormData && !FormData?.prototype?.getAll) {
+      FormData.prototype.getAll = FormData.prototype.getParts;
+    }
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    process.env.NODE_ENV !== 'production' && console.error(err);
   }
 }
