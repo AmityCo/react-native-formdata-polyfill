@@ -33,6 +33,6 @@ export default function polyfill() {
     }
   } catch (err) {
     // eslint-disable-next-line no-console
-    process.env.NODE_ENV !== 'production' && console.error(err);
+    process?.env?.NODE_ENV !== 'production' && console.error(err);
   }
 }
