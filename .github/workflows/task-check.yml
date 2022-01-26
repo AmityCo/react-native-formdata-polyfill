@@ -7,6 +7,6 @@ jobs:
   task-checker:
     runs-on: ubuntu-latest
     steps:
-      - uses: y-nk/task-checker-action@v0.1.0
+      - uses: EkoCommunications/PRChecks/task-list@develop
         with:
           skip_on: feature branch
