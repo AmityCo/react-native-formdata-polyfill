@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "install": "npx husky install",
+    "prepare": "husky install",
     "pretest": "npm run build",
     "test": "npm run test:dom && npm run test:node && npm run test:rn",
     "test:dom": "jest -c tests/dom/jest.config.js",
