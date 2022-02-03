@@ -33,6 +33,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
+          dry-run: true
 
       - name: commit changes
         run: git push --follow-tags
