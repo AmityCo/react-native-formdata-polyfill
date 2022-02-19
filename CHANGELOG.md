@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.1.5 (2022-02-19)
+
+
+### Bug Fixes
+
+* fix dist/polyfill in release ([#15](https://github.com/AmityCo/react-native-formdata-polyfill/issues/15)) ([617db21](https://github.com/AmityCo/react-native-formdata-polyfill/commit/617db21c4d04c772b7c75f8fae0a01aea3799bdf))
+
 ### 1.1.4 (2022-02-03)
 
 
