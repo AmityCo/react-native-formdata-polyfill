@@ -7,6 +7,7 @@ When using with axios, react-native lacks of necessary `FormData.prototype.getPa
 ## How to use it?
 
 1. `npm install @amityco/react-native-formdata-polyfill`
-2. `import @amityco/react-native-formdata-polyfill/polyfill`
+2. `import polyfill from @amityco/react-native-formdata-polyfill`
+2. `polyfill()`
 
 That's all!
